@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Provinha.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+
+
+            <Label
+                Text="Rolador de Dados"
+                FontSize="Title"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                />
+            <Label
+                x:Name="Mostrar"
+                Text=" "
+                FontSize="Large"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+          
+              />
+            <Picker x:Name="picker"
+                Title="Quantidades de Lados"
+                    HorizontalOptions="Center">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                        <x:String>100</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button 
+                 BackgroundColor="Blue"
+                 x:Name="Rodar"
+                 Text="Rolar o Dados"
+                 Clicked="onRodar"
+                 HorizontalOptions="Center"
+                  />
+        </VerticalStackLayout>
+      
+    </ScrollView>
+
+</ContentPage>
